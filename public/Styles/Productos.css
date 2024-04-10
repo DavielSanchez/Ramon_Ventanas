@@ -1,0 +1,27 @@
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.productos-grid img {
+    width: 300px;
+}
+
+.productos-grid p {
+    display: flex;
+    justify-content: center;
+}
+
+.productos-botones {
+    display: flex;
+    justify-content: center;
+}
+
+.productos-item {
+    display: block;
+}
+
+.producto-name {
+    display: flex;
+    justify-content: center;
+}

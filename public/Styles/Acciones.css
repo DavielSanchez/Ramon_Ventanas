@@ -1,0 +1,22 @@
+.acciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1em;
+}
+
+.acciones-item {
+    background-color: rgb(13, 17, 253);
+    color: white;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../../src//assets//679140.png'); */
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.acciones-item:hover {
+    background-color: rgb(13, 109, 253);
+    cursor: pointer;
+}

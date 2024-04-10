@@ -1,0 +1,36 @@
+/* body {
+    overflow-x: hidden;
+} */
+
+.content {
+    position: relative;
+    top: 0;
+    left: 18%;
+    width: 82%;
+    height: 100vh;
+    padding: 50px;
+    margin-bottom: 25px;
+}
+
+.actions-text {
+    margin-top: 40px;
+    margin-bottom: -10px;
+    display: flex;
+    /* justify-content: center; */
+}
+
+hr {
+    color: rgb(13, 109, 253);
+    margin-bottom: 40px;
+}
+
+.productos-botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.foto-td {
+    padding-left: 0;
+}

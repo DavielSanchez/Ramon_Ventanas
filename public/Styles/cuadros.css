@@ -1,0 +1,29 @@
+.cuadros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.cuadros-item {
+    background-color: rgb(13, 109, 253);
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 10px;
+}
+
+.cuadros-item:hover {
+    background-color: rgb(13, 17, 253);
+}
+
+.cuadros-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    /* padding-bottom: 5px; */
+}
+
+.cuadros-content {
+    padding-bottom: 5px;
+}
