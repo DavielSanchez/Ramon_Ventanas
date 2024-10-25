@@ -1,4 +1,5 @@
 import SideBar from "../Componentes/SideBar"
+import TopBar from "../Componentes/TopBar";
 import Ventas_table from "../Componentes/Ventas_table"
 import { Auth } from "../../FireBaseConfig/Authentication"
 import Nueva_venta from "../Componentes/Nueva_venta";
@@ -6,14 +7,15 @@ function Ventas() {
   Auth();
   return (
     <>
-        <title>Ramon Ventana | Ventas</title>
+        <title>BusinessName | Ventas</title>
         <SideBar/>
         <div className="content">
-        <h1>Ventas</h1>
+        <TopBar/>
+        {/* <h1>Ventas</h1> */}
+            <Nueva_venta/>
         <hr />
         <Ventas_table/>
         <div className="productos-botones">
-            <Nueva_venta/>
         </div>
     </div>
     </>

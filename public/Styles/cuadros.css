@@ -5,7 +5,7 @@
 }
 
 .cuadros-item {
-    background-color: rgb(13, 109, 253);
+    background-color: #517FFF;
     color: white;
     padding-left: 5%;
     padding-right: 5%;
@@ -13,7 +13,7 @@
 }
 
 .cuadros-item:hover {
-    background-color: rgb(13, 17, 253);
+    background-color: rgb(13, 109, 253);
 }
 
 .cuadros-header {

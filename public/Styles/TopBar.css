@@ -1,0 +1,17 @@
+.topbarcontainer {
+    background-color: #517FFF;
+    color: white;
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-top: -25px;
+    margin-bottom: 50px;
+    padding-top: 42px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.topBarContent {
+    display: flex;
+    justify-content: space-between;
+}

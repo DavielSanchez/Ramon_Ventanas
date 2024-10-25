@@ -1,42 +1,62 @@
 import { useState } from 'react';
 import { collection, addDoc } from "firebase/firestore";
 import { db } from '../../FireBaseConfig/Firebase';
+import { uploadFile } from '../../FireBaseConfig/Firebase';
+import Swal from 'sweetalert2'
+import withReactContent from "sweetalert2-react-content";
 
 function Nueva_venta() {
-// const productCollection = collection(db, 'Productos')
+
+  const MySwal = withReactContent(Swal)
+
+// const productCollection = collection(db, 'Ventas')
 const [Nombre, setNombre] = useState('')
 const [Precio, setPrecio] = useState('')
 const [Cantidad, setCantidad] = useState('')
-const [imagen, setimagen] = useState('')
 
-const agregar_producto = async (e) => {
+const nueva_Venta = async (e) => {
   e.preventDefault()
 
   setNombre(e.target.Nombre.value)
   setPrecio(e.target.Precio.value)
   setCantidad(e.target.Cantidad.value)
-  setimagen(e.target.imagen.value)
 
   try {
-    await addDoc(collection(db, "Productos"), {
+    await addDoc(collection(db, "Ventas"), {
       Nombre: Nombre,
       Precio: Precio,
-      Cantidad: Cantidad,
-      imagen: imagen
+      Cantidad: Cantidad
     });
     // console.log("Document written with ID: ", docRef.id);
-    console.log('')
+    await uploadFile
+    MySwal.fire({
+      title: "Muy bien!",
+      text: "El producto se ha agregado con exito.",
+      icon: "success"
+    });
   } catch (e) {
-    // console.error("Error adding document: ", e);
-    console.log('')
+    MySwal.fire({
+      title: "Error!",
+      text: "Ha ocurrido un error al agregar un producto nuevo.",
+      icon: "error"
+    });
   }
 }
 
 return (
   <>
-      <button type="button" className="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-Nueva venta
-</button>
+    <div className="ventaContainer">
+      <h1>Ventas</h1>
+      <button type="button" className="btn btn-primary mb-4 d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-plus-circle me-2 mt-1" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+          </svg>
+        <h4>
+        Nueva Venta
+        </h4>
+      </button>
+    </div>
 
 
 <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -47,7 +67,7 @@ Nueva venta
       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div className="modal-body">
-      <form onSubmit={agregar_producto}>
+      <form onSubmit={nueva_Venta}>
       <div className="mb-3">
         <label htmlFor="Nombre" className="form-label">Nombre del producto</label>
         <input type="text" className="form-control" id="Nombre" placeholder="Ventana de cristal"/>
@@ -57,16 +77,18 @@ Nueva venta
         <input type="number" className="form-control" id="Precio" placeholder="5500"/>
       </div>
       <div className="mb-3">
-        <label htmlFor="Cantidad" className="form-label">Cantidad inicial</label>
-        <input type="number" className="form-control" id="Cantidad" placeholder="2"/>
-      </div>
-      <div className="mb-3">
-        <label htmlFor="imagen" className="form-label">Enlace de la imagen</label>
-        <input type="text" className="form-control" id="imagen" placeholder="..."/>
-      </div>
-      <div className="mb-3">
-        <label htmlFor="formFile" className="form-label">Default file input example</label>
-        <input className="form-control" type="file" id="formFile"/>
+        <label htmlFor="products" className="form-label">Productos</label>
+        {/* <select className="form-select" aria-label="Default select example" multiple placeholder='Elige los productos'> 
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select> */}
+        <select className="form-select" aria-label="Default select example" name='products' multiple>
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
       </div>
       <div className="modal-footer">
       <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>

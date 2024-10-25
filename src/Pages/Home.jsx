@@ -1,4 +1,5 @@
 import SideBar from "../Componentes/SideBar"
+import TopBar from "../Componentes/TopBar"
 import Cuadros from "../Componentes/Cuadros"
 import Acciones from "../Componentes/Acciones"
 import Footer from "../Componentes/footer"
@@ -9,14 +10,15 @@ function Home() {
   Auth();
   return (
     <>
-    <title>Ramon Ventana | Inicio</title>
+    <title>BusinessName | Inicio</title>
         <SideBar/>
         <div className="content">
+          <TopBar/>
         <Cuadros/>
-        <div className="actions-text">
+        {/* <div className="actions-text">
             <h2>Acciones Rapidas</h2>
         </div>
-        <hr />
+        <hr /> */}
         <Acciones/>
         <Footer/>
     </div>

@@ -63,7 +63,7 @@ function Login() {
 
   return (
     <>
-    <title>Ramon Ventana | Login</title>
+    <title>BusinessName | Login</title>
     {/* <div className="d-flex align-items-center py-4 bg-body-tertiary"> */}
     <div className="form-signin w-100 m-auto">
   <form className='form' onSubmit={login}>

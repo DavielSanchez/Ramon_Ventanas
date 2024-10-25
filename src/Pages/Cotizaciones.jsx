@@ -4,7 +4,7 @@ import Nueva_cotizacion from "../Componentes/Nueva_cotizacion"
 function Cotizaciones() {
   return (
     <>
-    <title>Ramon Ventana | Inventario</title>
+    <title>BusinessName | Cotizaciones</title>
     <SideBar/>
     <div className="content">
         <h1>Cotizaciones</h1>

@@ -3,7 +3,7 @@ import './App.css'
 
 //Pages
 import Home from './Pages/Home'
-// import Clientes from './Pages/Clientes'
+import Clientes from './Pages/Clientes'
 import Inventario from './Pages/Inventario'
 import Productos from './Pages/Productos'
 import Ventas from './Pages/Ventas'
@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        {/* <Route path="/clientes" element={<Clientes/>}/> */}
+        <Route path="/clientes" element={<Clientes/>}/>
         <Route path="/inventario" element={<Inventario/>}/>
         <Route path="/productos" element={<Productos/>}/>
         <Route path="/ventas" element={<Ventas/>}/>

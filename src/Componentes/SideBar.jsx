@@ -70,28 +70,28 @@ function SideBar() {
 
 </svg>
         {/* <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;"> */}
-        <div className="sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark">
-    <a href="/" className="d-flex align-items-center mb-3 mb-md-0 text-white text-decoration-none justify-content-center">
-      <span className="fs-4">Ramon Ventanas</span>
+        <div className="sidebar d-flex flex-column flex-shrink-0 p-3">
+    <a href="/" className="d-flex align-items-center mb-3 mb-md-0 text-white text-decoration-none justify-content-center mt-4">
+      <span className="fs-2">Business Logo</span>
     </a>
-    <hr/>
-    <ul className="nav nav-pills flex-column mb-auto">
+  
+    <ul className="nav nav-pills flex-column mb-auto mt-5">
       <li className="nav-item">
       <NavLink to= '/' className={({isActive})=> isActive ? 'nav-link text-white active' : 'nav-link text-white'} aria-current="page">
-          <svg className="bi pe-none me-2 mb-1" width="18" height="18"><use xlinkHref="#home"/></svg>
-          Home
+          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#home"/></svg>
+          <span className='fs-4 home'>Home</span>
         </NavLink>
       </li>
       <li className="nav-item">
       <NavLink to= '/inventario' className={({isActive})=> isActive ? 'nav-link text-white active' : 'nav-link text-white'} aria-current="page">
-          <svg className="bi pe-none me-2 mb-1" width="18" height="18"><use xlinkHref="#archive"/></svg>
-          Inventario
+          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#archive"/></svg>
+          <span className='fs-4'>Inventario</span>
           </NavLink>
       </li>
       <li className="nav-item">
       <NavLink to= '/ventas' className={({isActive})=> isActive ? 'nav-link text-white active' : 'nav-link text-white'} aria-current="page">
-          <svg className="bi pe-none me-2 mb-1" width="18" height="18"><use xlinkHref="#sales"/></svg>
-          Ventas
+          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#sales"/></svg>
+          <span className='fs-4'>Ventas</span>
           </NavLink>
       </li>
       {/* <li className="nav-item">
@@ -101,30 +101,36 @@ function SideBar() {
           </NavLink>
       </li> */}
       <li className="nav-item">
+      <NavLink to= '/clientes' className={({isActive})=> isActive ? 'nav-link text-white active' : 'nav-link text-white'} aria-current="page">
+          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#customer"/></svg>
+          <span className='fs-4'>Clientes</span>
+          </NavLink>
+      </li>
+      <li className="nav-item">
       <NavLink to= '/productos' className={({isActive})=> isActive ? 'nav-link text-white active' : 'nav-link text-white'} aria-current="page">
-          <svg className="bi pe-none me-2 mb-1" width="18" height="18"><use xlinkHref="#productos"/></svg>
-          Productos
+          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#productos"/></svg>
+          <span className='fs-4'>Productos</span>
           </NavLink>
       </li>
       <li className="nav-item">
       <NavLink to= '/cotizaciones' className={({isActive})=> isActive ? 'nav-link text-white active' : 'nav-link text-white'} aria-current="page">
-          <svg className="bi pe-none me-2 mb-1" width="18" height="18"><use xlinkHref="#cotizacion"/></svg>
-          Cotizaciones
+          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#cotizacion"/></svg>
+          <span className='fs-4'>Cotizaciones</span>
           </NavLink>
       </li>
-      <hr />
-      <h3 className='settings'>Settings</h3>
-      <hr />
+      {/* <hr /> */}
+      <h2 className='settings text-light'>Settings</h2>
+      {/* <hr /> */}
       <li className="nav-item">
         <a href="#" className="nav-link text-white">
-          <svg className="bi pe-none me-2 mb-1" width="18" height="18"><use xlinkHref="#settings"/></svg>
-          Ajustes
+          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#settings"/></svg>
+          <span className='fs-4'>Ajustes</span>
         </a>
       </li>
       <li className="nav-item">
         <a onClick={logout} href="#" className="nav-link text-white">
-          <svg className="bi pe-none me-2 mb-1" width="18" height="18"><use xlinkHref="#salir"/></svg>
-          Salir
+          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#salir"/></svg>
+          <span className='fs-4'>Salir</span>
         </a>
       </li>
     </ul>

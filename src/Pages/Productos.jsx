@@ -7,7 +7,7 @@ function Productos() {
   Auth();
   return (
     <>
-    <title>Ramon Ventana | Productos</title>
+    <title>BusinessName | Productos</title>
         <SideBar/>
         <div className="content">
         <h1>Productos</h1>

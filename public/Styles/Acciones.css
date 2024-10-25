@@ -1,11 +1,19 @@
-.acciones-grid {
+/* .acciones-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1em;
+} */
+
+.acciones-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    /* Máximo dos cuadros por fila */
+    gap: 1em;
+    margin-top: 5%;
 }
 
 .acciones-item {
-    background-color: rgb(13, 17, 253);
+    background-color: #517FFF;
     color: white;
     height: 200px;
     display: flex;

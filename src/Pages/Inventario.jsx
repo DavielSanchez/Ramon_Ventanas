@@ -5,7 +5,7 @@ function Inventario() {
   Auth();
   return (
     <>
-    <title>Ramon Ventana | Inventario</title>
+    <title>BusinessName | Inventario</title>
     <SideBar/>
     <div className="content">
         <h1>Inventario</h1>

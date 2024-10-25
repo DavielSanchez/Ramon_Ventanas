@@ -73,6 +73,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: #517FFF;
 }
 
 .settings {
@@ -91,6 +92,20 @@ a .nav-link .icon {
 }
 
 .nav-item:hover {
-    background-color: rgba(13, 109, 253, 0.186) !important;
+    background-color: rgba(169, 203, 255, 0.186) !important;
     border-radius: var(--bs-nav-pills-border-radius);
 }
+
+.storeName {
+    font-size: 50px;
+}
+
+.nav-pills .nav-link.active {
+    width: 100%;
+    background-color: rgba(169, 203, 255, 0.186);
+}
+
+
+/* .home {
+    display: none;
+} */
