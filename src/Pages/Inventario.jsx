@@ -5,6 +5,7 @@ import Inventario_top_bar from "../Componentes/Inventarios_top_bar";
 import Producto_estado_chart from "../Componentes/Producto_estado_chart";
 import Producto_por_categoria from "../Componentes/Producto_por_categoria";
 import Inventario_stock_alert from "../Componentes/Inventario_stock_alert";
+import Inventario_cuadros from "../Componentes/Inventario_cuadros";
 import '../../public/Styles/Inventario.css'
 import { Auth } from "../../FireBaseConfig/Authentication"
 function Inventario() {
@@ -18,6 +19,7 @@ function Inventario() {
         {/* <h1>Inventario</h1> */}
         <Inventario_top_bar/>
         <hr />
+        <Inventario_cuadros/>
         <div className="Inventario_stats">
           <div className="estado_chart">
             <Producto_estado_chart/>

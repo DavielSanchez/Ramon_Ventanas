@@ -107,12 +107,6 @@ function SideBar() {
           </NavLink>
       </li>
       <li className="nav-item">
-      <NavLink to= '/productos' className={({isActive})=> isActive ? 'nav-link text-white active' : 'nav-link text-white'} aria-current="page">
-          <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#productos"/></svg>
-          <span className='fs-4'>Productos</span>
-          </NavLink>
-      </li>
-      <li className="nav-item">
       <NavLink to= '/cotizaciones' className={({isActive})=> isActive ? 'nav-link text-white active' : 'nav-link text-white'} aria-current="page">
           <svg className="bi pe-none me-3 mb-1" width="35" height="35"><use xlinkHref="#cotizacion"/></svg>
           <span className='fs-4'>Cotizaciones</span>
