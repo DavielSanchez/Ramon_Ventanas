@@ -1,7 +1,7 @@
 import SideBar from "../Componentes/SideBar"
 import TopBar from "../Componentes/TopBar"
 import Finanzas_ad from "../Componentes/Finanzas_ad"
-import Acciones from "../Componentes/Acciones"
+// import Acciones from "../Componentes/Acciones"
 import Footer from "../Componentes/footer"
 import Inventario_stock_alert from "../Componentes/Inventario_stock_alert"
 import Cobros_pendientes_table from "../Componentes/Cobros_pendientes_table"
@@ -32,7 +32,7 @@ function Home() {
           <Cobros_pendientes_table/>
           </div>
         </div>
-        <Acciones/>
+        {/* <Acciones/> */}
         <Footer/>
     </div>
     </>
