@@ -2,6 +2,10 @@
     overflow-x: hidden;
 } */
 
+body {
+    background-color: #f4f4f4;
+}
+
 .content {
     position: relative;
     top: 0;
@@ -10,6 +14,8 @@
     height: 100vh;
     padding: 50px;
     padding-top: 25px;
+    padding-bottom: 10%;
+    margin-bottom: 10%;
 }
 
 .actions-text {
@@ -38,4 +44,23 @@ hr {
 .ventaContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.chart-container {
+    width: 25%;
+}
+
+.home_alert_lists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stock_alert_home {
+    background-color: #ffffff;
+    height: 20%;
+    width: 49%;
+    padding: 2%;
+    border-radius: 3%;
+    border-color: #F3F6F9;
 }

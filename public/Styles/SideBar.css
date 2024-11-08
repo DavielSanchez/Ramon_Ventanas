@@ -73,7 +73,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #517FFF;
+    background-color: #4A4A4A;
 }
 
 .settings {
@@ -92,7 +92,7 @@ a .nav-link .icon {
 }
 
 .nav-item:hover {
-    background-color: rgba(169, 203, 255, 0.186) !important;
+    background-color: #a9cbff2f !important;
     border-radius: var(--bs-nav-pills-border-radius);
 }
 

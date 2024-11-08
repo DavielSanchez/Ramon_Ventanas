@@ -2,7 +2,9 @@ import SideBar from "../Componentes/SideBar"
 import TopBar from "../Componentes/TopBar";
 import Ventas_table from "../Componentes/Ventas_table"
 import { Auth } from "../../FireBaseConfig/Authentication"
-import Nueva_venta from "../Componentes/Nueva_venta";
+import Ventas_top_bar from "../Componentes/Ventas_top_bar";
+import Sales_cuadros from "../Componentes/Sales_cuadros";
+import '../../public/Styles/Ventas.css'
 function Ventas() {
   Auth();
   return (
@@ -12,10 +14,11 @@ function Ventas() {
         <div className="content">
         <TopBar/>
         {/* <h1>Ventas</h1> */}
-            <Nueva_venta/>
+            <Ventas_top_bar/>
         <hr />
+        <Sales_cuadros/>
+        <div className="listado_ventas">
         <Ventas_table/>
-        <div className="productos-botones">
         </div>
     </div>
     </>

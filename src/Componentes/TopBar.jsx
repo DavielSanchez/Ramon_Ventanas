@@ -1,6 +1,6 @@
 import "../../public/Styles/TopBar.css"
 import Avatar from '@mui/material/Avatar';
-import { lightBlue } from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
 
 function TopBar() {
   return (
@@ -11,7 +11,7 @@ function TopBar() {
             <Avatar
             alt="Daviel"
             src="/static/images/avatar/1.jpg"
-            sx={{ width: 50, height: 50, bgcolor: lightBlue[50], color: lightBlue[600]  }}
+            sx={{ width: 50, height: 50, bgcolor: blue[600], color: blue[0]  }}
             >DS</Avatar>
         </div>
     </div>
